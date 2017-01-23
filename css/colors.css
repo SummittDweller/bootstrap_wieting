@@ -3,42 +3,27 @@
  * This .less should define any and all colors ONLY.  Only
  *   background-color and color (foreground) should appear here!
  */
-p.pageBody {
-  color: #ffe4b7;
-}
-p.articleBody {
-  color: #ffe4b7;
-}
-p.pageBody a,
-p.articleBody a {
-  color: #fff7ea;
-}
-p.codeBlock {
-  color: #000000;
-  background-color: #b9c09f;
-}
-p.codeBlock a {
-  color: #000000;
-}
 body,
-.navbar.navbar-default.container,
-.well {
+.navbar.navbar-default.container {
   background-color: #8b9663;
   color: #ffe4b7;
 }
-div.rootstalk-block,
-#block-bootstrap-rootstalk-tools,
-#block-development,
-#block-views-block-next-pc-event-block-1 {
-  background-color: #b9c09f;
-  color: #000000;
+.well {
+  background-color: #a3ac80;
+  color: #ffe4b7;
+}
+.navbar-btn {
+  background-color: #6f784e;
+}
+.navbar-default .navbar-collapse {
+  background: #6f784e;
 }
 a {
   color: #fff7ea;
 }
 .is-active {
-  background-color: #b9c09f !important;
-  color: #000000 !important;
+  background-color: #a3ac80 !important;
+  color: #fff7ea !important;
 }
 a:hover,
 a:focus {
@@ -46,27 +31,21 @@ a:focus {
 }
 .is-active a:hover,
 .is-active a:focus {
-  color: #000000 !important;
+  color: #ffffff !important;
   text-decoration: underline !important;
 }
 a.well {
-  color: #000000;
+  color: #fff7ea;
 }
 a.well a:hover,
 a.well a:focus {
-  color: #ffe4b7 !important;
+  color: #ffffff !important;
 }
 .toolbar .toolbar-tray-horizontal > .toolbar-lining {
   background-color: whitesmoke;
 }
-div.author-info {
-  background-color: #b9c09f;
-  color: #000000;
-}
-div .field--name-field-embedded-links div .field--item,
-.file span {
-  background-color: #b9c09f;
-  color: #000000;
+.region-navigation-collapsible {
+  background-color: #444930;
 }
 .navbar-default .navbar-nav li a {
   color: #ffe4b7;
@@ -75,11 +54,8 @@ div .field--name-field-embedded-links div .field--item,
   color: #fff7ea !important;
 }
 .navbar-default .navbar-nav li a .is-active {
-  background-color: #b9c09f !important;
-  color: #000000;
-}
-.rootstalk-block .nav li a {
-  color: #000000;
+  background-color: #a3ac80 !important;
+  color: #fff7ea;
 }
 .nav li a:hover,
 .nav li a:focus,
@@ -87,21 +63,10 @@ div .field--name-field-embedded-links div .field--item,
   background-color: #8b9663;
   color: #fff7ea;
 }
-/*
-.dropdown-menu {
-  background-color: lighten(@secondary, 10%);
-}
-
-.dropdown-menu li a {
-  color: contrast(lighten(@secondary, 10%), @lite, @dark);
-}
-*/
-#block-views-block-next-pc-event-block-1 div.form-group div div.view-header,
-div.rootstalk-block div.block-text p {
-  background-color: #cfd4be;
+div.calendar-calendar {
   color: #000000;
 }
-.statistics-counter {
-  background-color: #b9c09f;
+nav.pager > ul > li > a,
+div.calendar-calendar a {
   color: #000000;
 }

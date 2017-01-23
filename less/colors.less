@@ -6,9 +6,9 @@
 
 //--- Definitions --------------------------------------------------------//
 
-@base: darken(#b9c09f, 10%);    // base/background color
-@lite: #fff7ea;    // contrast(lite) color
-@dark: #000000;    // contrast(dark) color
+@base: darken(#b9c09f, 20%);    // base/background color
+@lite: #fff7ea;                 // contrast(lite) color
+@dark: #000000;                 // contrast(dark) color
 
 @primary: @base;
 @p-link: contrast(@primary, @lite, @dark);
@@ -20,7 +20,7 @@
 @s-text: darken(@s-link, 10%);
 @s-border: contrast(@secondary, @lite, @dark);
 
-@author: lighten(@primary, 20%);
+@banner: darken(@primary, 10%);
 
 @complement1: spin(@primary, 180);
 @complement2: darken(spin(@primary, 180), 5%);
@@ -29,45 +29,25 @@
 
 //--- Implementations ----------------------------------------------------//
 
-//--- Editor text styles...  Keep these near the top since they are tied to defined styles.
-
-p.pageBody {
-  color: @p-text;
-}
-
-p.articleBody {
-  color: @p-text;
-}
-
-p.pageBody a,
-p.articleBody a {
-  color: @p-link;
-}
-
-p.codeBlock {
-  color: @s-text;
-  background-color: @secondary;
-}
-
-p.codeBlock a {
-  color: @s-link
-}
-
 //--- Background and text colors
 
 body,                                  // Primary regions
-.navbar.navbar-default.container,
-.well {
+.navbar.navbar-default.container {
   background-color: @primary;
   color: @p-text;
 }
 
-div.rootstalk-block,                  // Secondary regions
-#block-bootstrap-rootstalk-tools,
-#block-development,
-#block-views-block-next-pc-event-block-1 {
+.well {                                // Secondary regions
   background-color: @secondary;
   color: @s-text;
+}
+
+.navbar-btn {
+  background-color: @banner;
+}
+
+.navbar-default .navbar-collapse {;
+  background: @banner;
 }
 
 //--- Primary region links
@@ -113,22 +93,11 @@ a.well a:focus {
   background-color: whitesmoke;
 }
 
-//--- author-info   See node--journal_article.html.php for details.
-
-div.author-info {
-  background-color: @author;
-  color: contrast(@author, @lite, @dark);
-}
-
-//--- Downloadable files and embedded links
-
-div .field--name-field-embedded-links div .field--item,
-.file span {
-  background-color: @secondary;
-  color: contrast(@secondary, @lite, @dark);
-}
-
 //--- Main menu
+
+.region-navigation-collapsible {
+  background-color: darken(@primary, 25%);
+}
 
 .navbar-default .navbar-nav li a {
   color: darken(@p-link, 10%);
@@ -143,12 +112,6 @@ div .field--name-field-embedded-links div .field--item,
   color: @s-link;
 }
 
-//--- Rootstalk Block
-
-.rootstalk-block .nav li a {
-  color: @s-link;
-}
-
 .nav li a:hover,
 .nav li a:focus,
 .nav li a:active {
@@ -156,27 +119,13 @@ div .field--name-field-embedded-links div .field--item,
   color: contrast(@primary, @lite, @dark);
 }
 
-/*
-.dropdown-menu {
-  background-color: lighten(@secondary, 10%);
+//-- Calendars
+
+div.calendar-calendar {
+  color: contrast(white, @lite, @dark);
 }
 
-.dropdown-menu li a {
-  color: contrast(lighten(@secondary, 10%), @lite, @dark);
-}
-*/
-
-//--- .well - The secondary (right-hand) block region
-
-#block-views-block-next-pc-event-block-1 div.form-group div div.view-header,
-div.rootstalk-block div.block-text p {
-  background-color: lighten(@secondary, 10%);
-  color: darken(@s-text, 10%);
-}
-
-//--- .statistics-counter
-
-.statistics-counter {
-  background-color: @secondary;
-  color: @s-link;
+nav.pager > ul > li > a,
+div.calendar-calendar a {
+  color: contrast(white, @lite, @dark);
 }
